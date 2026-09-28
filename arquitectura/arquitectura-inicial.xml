@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Claude" version="24.7.0">
+  <diagram id="sijass-arquitectura" name="Arquitectura SIJASS">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="titulo" value="ARQUITECTURA INICIAL — SIJASS" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1020" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" value="Sistema de Monitoreo Inteligente para Juntas Administradoras de Servicios de Saneamiento — Ayacucho" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#000000;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="38" width="1020" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_actores" value="ACTORES" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontColor=#000000;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="75" width="740" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="operador" value="Operador técnico" style="shape=umlActor;verticalLabelPosition=bottom;labelPosition=center;align=center;verticalAlign=top;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="108" width="28" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="tesorero" value="Tesorero" style="shape=umlActor;verticalLabelPosition=bottom;labelPosition=center;align=center;verticalAlign=top;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="396" y="108" width="28" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="consejo" value="Consejo directivo" style="shape=umlActor;verticalLabelPosition=bottom;labelPosition=center;align=center;verticalAlign=top;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="652" y="108" width="28" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_interesados" value="INTERESADOS" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontColor=#000000;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="810" y="75" width="250" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="atm" value="ATM municipal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="835" y="105" width="200" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="asociados" value="Asociados (familias)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="835" y="147" width="200" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_presentacion" value="PRESENTACIÓN — Cliente" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontColor=#000000;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="1020" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="pwa" value="&lt;b&gt;Aplicación PWA&lt;/b&gt;&lt;br&gt;[React, Vite, Workbox]&lt;br&gt;Interfaz móvil" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="268" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="indexeddb" value="&lt;b&gt;IndexedDB (Dexie)&lt;/b&gt;&lt;br&gt;Persistencia local&lt;br&gt;y cola de operaciones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="345" y="268" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="onnx" value="&lt;b&gt;Modelo IA local&lt;/b&gt;&lt;br&gt;[ONNX Runtime Web]&lt;br&gt;Inferencia sin conexión" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="268" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="sw" value="&lt;b&gt;Service Worker&lt;/b&gt;&lt;br&gt;Caché de app&lt;br&gt;y del modelo .onnx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="855" y="268" width="160" height="72" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_negocio" value="LÓGICA DE NEGOCIO — API Backend [Node.js, NestJS] — Monolito modular" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontColor=#000000;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="780" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_identidad" value="&lt;b&gt;Identidad y acceso&lt;/b&gt;&lt;br&gt;&lt;br&gt;Autenticación&lt;br&gt;Roles (RBAC)&lt;br&gt;JWT · bcrypt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;fontSize=11;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="65" y="440" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_cuotas" value="&lt;b&gt;Asociados y cuotas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Padrón de asociados&lt;br&gt;Pagos por periodo&lt;br&gt;Morosidad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;fontSize=11;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="255" y="440" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_cloracion" value="&lt;b&gt;Cloración&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mediciones de cloro&lt;br&gt;Cálculo de dosis&lt;br&gt;Reportes y alertas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=11;verticalAlign=top;spacingTop=6;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="445" y="440" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_sync" value="&lt;b&gt;Sincronización&lt;/b&gt;&lt;br&gt;&lt;br&gt;Procesar lotes&lt;br&gt;Idempotencia (UUID)&lt;br&gt;Resolver conflictos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=11;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="635" y="440" width="170" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_ia" value="SERVICIO DE IA" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontColor=#000000;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="850" y="400" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_ia" value="&lt;b&gt;Servicio de IA&lt;/b&gt;&lt;br&gt;[Python, FastAPI,&lt;br&gt;ONNX Runtime]&lt;br&gt;&lt;br&gt;Verificación asíncrona&lt;br&gt;Registro de versiones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="870" y="435" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pipeline" value="&lt;b&gt;Pipeline entrenamiento&lt;/b&gt;&lt;br&gt;[PyTorch — fuera de línea]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="535" width="170" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_datos" value="DATOS" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontColor=#000000;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="1020" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" value="&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;br&gt;Datos transaccionales&lt;br&gt;(JASS, asociados, pagos,&lt;br&gt;mediciones)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffffff;strokeColor=#d79b00;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="140" y="678" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="&lt;b&gt;Redis&lt;/b&gt;&lt;br&gt;Caché e&lt;br&gt;idempotencia" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffffff;strokeColor=#d79b00;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="678" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="objetos" value="&lt;b&gt;Almacén de objetos&lt;/b&gt;&lt;br&gt;Fotos DPD y&lt;br&gt;modelos .onnx" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffffff;strokeColor=#d79b00;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="678" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grp_externos" value="SISTEMAS EXTERNOS" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;dashed=1;fontColor=#000000;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="825" width="1020" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="mensajeria" value="&lt;b&gt;Servicio de mensajería&lt;/b&gt;&lt;br&gt;Envía alertas de cloro fuera de rango" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="190" y="862" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="clima" value="&lt;b&gt;Datos climáticos&lt;/b&gt; [fase futura]&lt;br&gt;Series históricas para analítica predictiva" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#000000;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="862" width="290" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_act_pres" value="usa (HTTPS)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="grp_actores" target="grp_presentacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pres_neg" value="REST / JWT" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;strokeWidth=2;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="grp_presentacion" target="grp_negocio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_neg_dat" value="SQL / caché / fotos" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="grp_negocio" target="grp_datos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_neg_ia" value="HTTP asínc." style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#d79b00;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" parent="1" source="grp_negocio" target="grp_ia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ia_obj" value="lee fotos" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#d79b00;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="grp_ia" target="objetos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_obj_sw" value="descarga del modelo .onnx (caché del Service Worker)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1;strokeColor=#9673a6;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;fontStyle=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="objetos" target="sw">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1075" y="723" />
+              <mxPoint x="1075" y="304" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_neg_ext" value="solicita envío de alertas" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1;strokeColor=#b85450;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mod_cloracion" target="mensajeria">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="618" />
+              <mxPoint x="20" y="618" />
+              <mxPoint x="20" y="845" />
+              <mxPoint x="335" y="845" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_neg_atm" value="reportes de calidad del agua" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#82b366;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=11;exitX=1;exitY=0.15;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="grp_negocio" target="atm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="430" />
+              <mxPoint x="832" y="210" />
+              <mxPoint x="935" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pipe_ia" value="publica modelo versionado" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1;strokeColor=#666666;fontColor=#000000;labelBackgroundColor=#ffffff;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pipeline" target="svc_ia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nota" value="&lt;b&gt;Nota.&lt;/b&gt; Elaboración propia siguiendo la notación C4 (Brown, 2018). Los elementos en amarillo corresponden al flujo crítico sin conexión;&lt;br&gt;los elementos con borde discontinuo corresponden a fases futuras o a procesos fuera de línea." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#000000;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="40" y="945" width="1020" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
