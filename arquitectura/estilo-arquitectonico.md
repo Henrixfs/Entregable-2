@@ -340,8 +340,4 @@ flowchart LR
 
 ---
 
-## Referencias
 
-- Bass, L., Clements, P., & Kazman, R. (2021). *Software Architecture in Practice* (4th ed.). Addison-Wesley.
-- Brown, S. (2018). *The C4 model for visualising software architecture*. https://c4model.com
-- Martin, R. C. (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall.
